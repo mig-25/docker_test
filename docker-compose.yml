@@ -44,7 +44,7 @@ services:
       - ./strapi_data:/srv/app
     depends_on:
       - postgres
-    command: /bin/bash -c "npm install && strapi start"
+    command: /bin/bash -c "npm install && strapi develop"
     environment:
       NODE_ENV: development
       DATABASE_CLIENT: postgres
@@ -57,8 +57,8 @@ services:
       APP_KEYS: jP8pb1lYsAhnmURarewxhA==,34xnLMYHY5jiU7ONTstTqQ==
       HOST: 0.0.0.0
       PORT: 1337
-      PUBLIC_URL: 'http://daemon.extinctcoder.live:1337'
-      ADMIN_PUBLIC_URL: 'http://daemon.extinctcoder.live:1337/admin/abc'
+      # PUBLIC_URL: 'http://localhost:1337'
+      # ADMIN_PUBLIC_URL: 'http://localhost:1337/admin'
 
   pgadmin:
     image: dpage/pgadmin4:latest
